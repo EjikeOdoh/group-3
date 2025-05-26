@@ -1,0 +1,56 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.badges{
+    display: flex;
+    gap: 6px;
+}
+
+
+.badge {
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1.5px solid #66448E;
+    font-size: 0.6rem;
+    font-weight: 600;
+
+}
+
+.top h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.top p {
+    font-weight: 600;
+    margin-bottom: 48px;
+}
+
+.top .btn{
+    width: 50%;
+}
+
+.buttom {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.buttom p {
+    font-size: 0.875rem;
+}
