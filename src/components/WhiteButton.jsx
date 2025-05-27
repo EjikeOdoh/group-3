@@ -1,6 +1,6 @@
 import styles from "../styles/whiteButton.module.css"
-export default function Button() {
+export default function WhiteButton(props) {
     return (
-        <button className={styles.Whitebtn}>WhiteButton</button>
+        <button className={styles.whitebtn}>{props.text}</button>
     )
 }
