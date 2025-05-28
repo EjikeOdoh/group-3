@@ -1,0 +1,16 @@
+.row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.radio {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.radio label{
+    font-size: 1rem;
+}

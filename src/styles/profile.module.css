@@ -1,0 +1,67 @@
+.container {
+padding: 32px;
+display: flex;
+flex-direction: column;
+gap: 120px;
+
+}
+
+.container .top{
+    display: grid;
+    gap: 64px;
+}
+
+.container .heading{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.heading h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.heading p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.icon {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-color: yellow;
+    display: grid;
+    place-content: center;
+    font-size: 96px;
+    margin: auto;
+}
+
+.container .btns{
+    display: grid;
+    gap: 16px;
+}
+
+.container .buttom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttom button {
+    padding-inline: 20px;
+    height: 32px;
+    font-size: 0.875rem;
+}
+
+.buttom .skip {
+    border: 1.5px solid grey;
+    background: none;
+
+}
+
+.buttom .next{
+    background-color: grey;
+    color: white;
+}

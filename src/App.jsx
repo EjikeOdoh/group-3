@@ -6,6 +6,7 @@ import Hero from './pages/hero'
 import SignUp from './pages/SignUp'
 import Login from './pages/Login'
 import Profile from './pages/profile'
+import Quicksurvey from './pages/QuickSurvey'
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
     <SignUp />
     <Login />
     <Profile />
+    <Quicksurvey />
+    
     </>
   )
 }
