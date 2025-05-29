@@ -1,0 +1,52 @@
+.container {
+    background-color: #f2EEF7;
+    display: grid;
+    place-content: center;
+    gap: 70px;
+    padding-block: 100px;
+
+}
+
+.container .top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    gap: 24px;
+}
+
+.top .content {
+    background-color: white;
+    display: grid;
+    place-content: center;
+    border-radius: 32px;
+
+}
+
+.content .texts {
+display: grid;
+gap: 24px;
+}
+
+.texts ul{
+    list-style-type: none;
+    display: grid;
+    gap: 24px;
+
+
+}
+
+.texts ul li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.down {
+    display: flex;
+    align-items: center;  
+    gap: 32px;
+    width: 600px;
+    margin: auto;
+
+}
