@@ -6,8 +6,9 @@ return (
     <div className={styles.container}>
        
         <div className={styles.item}>
-            <IoCodeSlashOutline  />
+            <IoCodeSlashOutline />
             <p>{props.text}</p>
+            
         </div>
             <button className={styles.btn}>Start</button>
     </div>

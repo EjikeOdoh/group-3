@@ -11,22 +11,24 @@ import Result from './pages/Result'
 import Modal from './components/Modal'
 import Quizzes from './pages/Quizzes'
 import Quiz from './components/Quiz'
+import Landing from './pages/Landing'
 
 
 function App() {
 
   return (
     <>
-    <Hero />
+    {/*<Hero />*/}
     {/* <Layout /> */}
-    <SignUp />
-    <Login />
+    {/*<SignUp />*/}
+   {/*<Login />*/}
     <Profile />
     <Quicksurvey />
     <Result />
     <Modal />
     <Quizzes />
     <Quiz />
+    <Landing />
     
     </>
   )

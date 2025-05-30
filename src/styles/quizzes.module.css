@@ -1,3 +1,14 @@
 .container {
     display: flex;
 }
+
+
+.row{
+    display: grid;
+    margin: auto;
+    background-color: #FBFBFB;
+    padding:24px 24px ;
+    border-radius: 24px;
+    gap: 32px;
+}
+
