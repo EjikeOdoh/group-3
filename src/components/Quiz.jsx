@@ -6,7 +6,8 @@ return (
     <div className={styles.container}>
        
         <div className={styles.item}>
-            <IoCodeSlashOutline />
+            <img src={props.icon} alt="" />
+        
             <p>{props.text}</p>
             
         </div>

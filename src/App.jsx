@@ -19,19 +19,19 @@ function App() {
 
   return (
     <>
-    {/*<Hero />*/}
-    {/* <Layout /> */}
-    {/*<SignUp />*/}
-   {/*<Login />*/}
-    <Profile />
-    <Quicksurvey />
-    <Result />
-    <Modal />
-    <Quizzes />
-    <Quiz />
-    <Landing />
-    
       <LandingPage />
+      <Landing />
+      <Hero />
+      <Layout />
+      <SignUp />
+      <Login />
+      <Profile />
+      <Quicksurvey/>
+      <Result />
+      <Modal />
+      <Quizzes />
+      
+
     </>
   )
 }
