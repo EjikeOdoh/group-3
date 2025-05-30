@@ -13,6 +13,7 @@ import Quizzes from './pages/Quizzes'
 import Quiz from './components/Quiz'
 import Landing from './pages/Landing'
 
+import LandingPage from './pages/LandingPage'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
     <Quiz />
     <Landing />
     
+      <LandingPage />
     </>
   )
 }
