@@ -12,6 +12,7 @@ import { PiCaretDownBold } from 'react-icons/pi'
 import { SiInstagram } from 'react-icons/si'
 import { CiLinkedin, CiTwitter } from 'react-icons/ci'
 import { useState } from 'react'
+import { MdMenu } from 'react-icons/md'
 
 
 function Item(props) {
@@ -128,6 +129,10 @@ export default function LandingPage() {
                         <button className={styles.signInBtn}>Sign-In</button>
                         <button>Sign-Up</button>
                     </div>
+
+                    <button className={styles.menuBtn}>
+                        <MdMenu size={24} />
+                    </button>
                 </nav>
                 <div className={styles.hero}>
                     <div className={styles.left}>
@@ -235,12 +240,12 @@ export default function LandingPage() {
 
                 <div className={styles.right}>
                     <FooterCol
-                        heading="About"
-                        options={[]}
+                        heading="Company"
+                        options={["Contact us", "About us", "Pricing"]}
                     />
                     <FooterCol
-                        heading="FAQs"
-                        options={[]}
+                        heading="Account"
+                        options={["Pricing policy","Terms & conditions", "Help center"]}
                     />
                     <FooterCol
                         heading="Contact"
