@@ -12,8 +12,11 @@ import Modal from './components/Modal'
 import Quizzes from './pages/Quizzes'
 import Quiz from './components/Quiz'
 import Landing from './pages/Landing'
-
 import LandingPage from './pages/LandingPage'
+import Info from './pages/Info'
+import Notification from './pages/Notification'
+import Support from './pages/Support'
+
 
 function App() {
 
@@ -30,6 +33,9 @@ function App() {
       <Result />
       <Modal />
       <Quizzes />
+      <Info />
+      <Notification />
+      <Support /> 
       
 
     </>
