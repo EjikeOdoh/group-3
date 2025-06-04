@@ -1,3 +1,14 @@
+:root {
+  --new-white: #FBFBFB;
+  --primary: #5F4085;
+  --light-primary: #ECE6F3;
+  --dark-primary: #171717;
+  --primary-border: #7F55B1;
+  --text: #1E1E1E;
+  --grey: #E5E7EA;
+}
+
+
 * {
   margin: 0;
   padding: 0;
