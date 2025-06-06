@@ -2,14 +2,14 @@
 
 .item {
     display: flex;
-    gap: 4px;
+    gap: 6px;
     align-items: center;
-    border: 1px solid #E5E5E5EE;
+    height: 70px;
     border-radius: 8px;
-    padding: 16px;
+    padding-inline: 16px;
 }
 
-.item .image {
+.item .image, .session .image {
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -34,6 +34,98 @@
     font-size: 0.75rem;
 }
 
+/* Styling for course component */
+.course {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #E5E5E5EE;
+    padding-right: 16px;
+    border-radius: 8px;
+    height: 70px;
+}
+
+.course .left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.timeContainer small {
+    font-size: 0.6rem;
+}
+
+.timeContainer p {
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+
+/* Styling for Summary component */
+.summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #E5E5E5EE;
+    padding-right: 16px;
+    border-radius: 8px;
+}
+
+
+/* Styling for session component */
+.session {
+    height: 120px;
+    padding-inline: 16px;
+    border: 1px solid #E5E5E5EE;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.session .left {
+   display: flex;
+   align-items: center;
+   gap: 12px; 
+}
+
+.session .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.session .texts h4 {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.session .texts > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.session .texts > div small {
+    font-size: 0.625rem;
+}
+
+.session .bottom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tag p {
+    font-size: 0.625rem;
+}
 
 /* Styling for courses page */
 .container {
@@ -64,10 +156,26 @@
 
 .first {
     grid-area: first;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+.first .sessions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .second {
     grid-area: second;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .third {
@@ -92,8 +200,25 @@
     color: var(--primary-darker);
 }
 
-.courses > div {
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap:8px;
+}
+
+.ongoing {
+    display: flex;
+    flex-direction: column;
+}
+
+.ongoing > div, .second > div:last-of-type {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.seeAll {
+    font-size: 0.875rem;
+    color: #724D9F;
 }
