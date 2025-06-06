@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: #FBFBFB;
+    width: 580px;
+
+}
+
+
+.input {
+    display: flex;
+    gap: 16px;
+    width: 580px;
+    height: 56px;
+    background-color: #FBFBFB;
+    padding: 8px;
+    gap: 16px;
+    
+    
+
+}
+
+.radio {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+   
+}
+
+.alphabet{
+    background-color: #D7CAE7;
+    padding: 8px 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    
+}
+
+.radio .option{
+    width: 24px;
+    height: 24px;
+
+}
+
+
+
+
+
+

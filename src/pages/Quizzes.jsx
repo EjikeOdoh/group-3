@@ -1,11 +1,10 @@
 import { RiFlaskLine } from "react-icons/ri"
 import Quiz from "../components/Quiz"
 import styles from "../styles/quizzes.module.css"
-import { GrDocument } from "react-icons/gr"
-import { IoCodeSlash } from "react-icons/io5"
 import document from "../images/document.png"
 import code from "../images/code.png"
 import cells from "../images/cells.png"
+import flask from "../images/flask.png"
 import figma from "../images/figma.png"
 import flask from "../images/flask.png"
 

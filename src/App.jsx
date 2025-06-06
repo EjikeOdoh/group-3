@@ -13,15 +13,8 @@ import Quizzes from './pages/Quizzes'
 import Quiz from './components/Quiz'
 import Landing from './pages/Landing'
 import LandingPage from './pages/LandingPage'
-import Info from './pages/Info'
-import Notification from './pages/Notification'
-import Support from './pages/Support'
-import Mode from './pages/Mode'
-import Reward from './pages/Reward'
-import Reminder from './components/Reminder'
-import Calender from './pages/calender'
-import Courses from './pages/Courses'
-
+import Quizlist from './pages/Quizlist'
+import Input from './components/Input'
 
 function App() {
 
@@ -36,16 +29,11 @@ function App() {
       <Profile />
       <Quicksurvey />
       <Result />
-      <Modal /> 
-      <Quizzes /> 
-       <Info />
-      <Notification />
-      <Support />
-      <Mode />
-      <Reward /> 
-      <Calender />
-      <Courses />
-
+      <Modal />
+      <Quizzes />
+      <Quizlist />
+      <Input />
+      
 
     </>
   )
