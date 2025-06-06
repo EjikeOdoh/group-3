@@ -16,6 +16,11 @@ import LandingPage from './pages/LandingPage'
 import Info from './pages/Info'
 import Notification from './pages/Notification'
 import Support from './pages/Support'
+import Mode from './pages/Mode'
+import Reward from './pages/Reward'
+import Reminder from './components/Reminder'
+import Calender from './pages/calender'
+import Courses from './pages/Courses'
 
 
 function App() {
@@ -27,16 +32,20 @@ function App() {
       <Hero />
       <Layout />
       <SignUp />
-      <Login />
+      <Login /> 
       <Profile />
-      <Quicksurvey/>
+      <Quicksurvey />
       <Result />
-      <Modal />
-      <Quizzes />
-      <Info />
+      <Modal /> 
+      <Quizzes /> 
+       <Info />
       <Notification />
-      <Support /> 
-      
+      <Support />
+      <Mode />
+      <Reward /> 
+      <Calender />
+      <Courses />
+
 
     </>
   )

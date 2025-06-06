@@ -5,46 +5,69 @@ import { MdKeyboardArrowDown } from "react-icons/md"
 import { GoPerson } from "react-icons/go"
 import { IoChatbox, IoChatboxOutline } from "react-icons/io5"
 import { RxCaretDown } from "react-icons/rx"
+import { VscListFilter } from "react-icons/vsc"
 
 
-export default function Notification () {
+export default function Notification() {
 
-return(
-    <div>
-        <h4>
-            All Notifications
-        </h4>
-            <IoMdFunnel />
-            <Button text="Today" icon={<RxCaretDown />} />
+    return (
+        <div className={styles.container}>
+            <div className={styles.all}>
+                <h4>
+                    All Notifications
+                </h4>
 
-            <div>
-                <GoPerson />
-                <p>
-                    Congratulations! your profile is 100% complete
-                </p>
-                <p>
-                    Welcome to the most adaptive online learning platform
-                </p>
+                <div className={styles.today}>
+                    <VscListFilter size={45} />
+                    <Button text="Today" icon={<RxCaretDown size={30} />} />
+                </div>
+
+            </div>
+            <div className={styles.row}>
+
+                <div className={styles.left}>
+                    <div className={styles.icon}>
+                        <GoPerson size={24} />
+                    </div>
+
+                    <div className={styles.text}>
+                        <h4>
+                            Congratulations! your profile is 100% complete
+                        </h4>
+                        <p>
+                            Welcome to the most adaptive online learning platform
+                        </p>
+                    </div>
+                </div>
                 <p>
                     08/6/2025
                 </p>
             </div>
-            <div>
-                <IoChatboxOutline />
-                <p>
-                    Lesson at 2:PM              
-                      </p>
-                <p>
-                </p>
-                Reminder to download lessons
+            <div className={styles.row}>
+
+                <div className={styles.left}>
+                    <div className={styles.icon}>
+                        <IoChatboxOutline  size={24}/>
+                    </div>
+
+                    <div className={styles.text}>
+                        <h4>
+                            Lesson at 2:PM
+                        </h4>
+                        <p>
+                              Reminder to download lessons
+                        </p>
+                    </div>
+                </div>
                 <p>
                     08/6/2025
                 </p>
+
             </div>
-    </div>
 
+            
 
+        </div>
 
-
-)
+    )
 }

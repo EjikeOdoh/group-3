@@ -5,8 +5,9 @@ import { GrDocument } from "react-icons/gr"
 import { IoCodeSlash } from "react-icons/io5"
 import document from "../images/document.png"
 import code from "../images/code.png"
-import cells from "../images/code.png"
+import cells from "../images/cells.png"
 import figma from "../images/figma.png"
+import flask from "../images/flask.png"
 
 
 
@@ -16,10 +17,10 @@ export default function Quizzes () {
             <div></div>
             <div className={styles.row}>
                 
-        <Quiz icon={document} text="Coding and design" />
-        <Quiz icon={code} text="Algebra quiz" />
+        <Quiz icon={code}  text="Coding and design" />
+        <Quiz icon= {document} text="Algebra quiz" />
         <Quiz icon={cells} text="Science quiz" />
-        <Quiz icon={figma} text="Biology quiz"/>
+        <Quiz icon={flask} text="Biology quiz"/>
         <Quiz icon={figma} text="Figma quiz"/>
             </div>
         </div>

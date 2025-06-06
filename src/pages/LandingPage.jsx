@@ -235,12 +235,12 @@ export default function LandingPage() {
 
                 <div className={styles.right}>
                     <FooterCol
-                        heading="About"
-                        options={[]}
+                        heading="Company"
+                        options={["Contact us", "About us", "Pricing"]}
                     />
                     <FooterCol
-                        heading="FAQs"
-                        options={[]}
+                        heading="Account"
+                        options={["Privacy policy", "Terms & Conditions", "Help center"]}
                     />
                     <FooterCol
                         heading="Contact"

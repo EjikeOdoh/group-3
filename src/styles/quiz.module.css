@@ -1,14 +1,32 @@
 .container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 880px;
+    height: 90px;
+    padding: 16px;
+
 
 }
 
 .item{
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
+    width: 39px;
+    height: 30px;
 }
+
+.item p {
+ font-weight: 600;
+ font-family: inherit;
+ font-size: 1.2rem;
+
+
+ 
+
+}
+
 
 .btn{
     width: fit-content;
