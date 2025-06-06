@@ -1,0 +1,14 @@
+.container {
+    border-radius: 8px;
+    border: 1.5px solid var(--grey);
+    font-size: 0.875rem;
+    font-weight: 400;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    font-family: "Quicksand", sans-serif;
+    color: var(--text);
+}

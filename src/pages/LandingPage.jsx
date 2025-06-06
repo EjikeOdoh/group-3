@@ -13,6 +13,7 @@ import { SiInstagram } from 'react-icons/si'
 import { CiLinkedin, CiTwitter } from 'react-icons/ci'
 import { useState } from 'react'
 import { MdMenu } from 'react-icons/md'
+import { Link } from 'react-router'
 
 
 function Item(props) {
@@ -126,8 +127,8 @@ export default function LandingPage() {
                     </ul>
 
                     <div className={styles.btns}>
-                        <button className={styles.signInBtn}>Sign-In</button>
-                        <button>Sign-Up</button>
+                        <Link to="/login" className={styles.signInBtn}>Sign-In</Link>
+                        <Link to="/register" className="btn">Sign-Up</Link>
                     </div>
 
                     <button className={styles.menuBtn}>
@@ -137,7 +138,7 @@ export default function LandingPage() {
                 <div className={styles.hero}>
                     <div className={styles.left}>
                         <h1>Learn Smarter, Anywhere, Anytime</h1>
-                        <button>Start Learning</button>
+                        <Link className='btn'>Start Learning</Link>
                     </div>
                     <div className={styles.right}>
                         <img src={Cover} alt='video icon' />

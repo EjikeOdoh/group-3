@@ -23,15 +23,19 @@
 
 .navbar ul a {
     padding: 12px 24px;
+    color: var(--new-white);
 }
 
 .btns {
     display: flex;
+    align-items: center;
     gap: 8px;
 }
 
 .signInBtn {
     background-color: transparent;
+    color: var(--new-white);
+    padding: 16px 24px;
 }
 
 .menuBtn {
@@ -59,7 +63,7 @@
     font-weight: 700;
 }
 
-.left button {
+.left a {
     width: fit-content;
 }
 
@@ -119,7 +123,7 @@
     background-color: #FBFBFB;
 }
 
-.cta>div {
+.cta > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
@@ -244,6 +248,7 @@
 .footerCol {
     display: grid;
     gap: 20px;
+    height: fit-content;
 }
 
 .footerCol h3 {
@@ -254,7 +259,7 @@
 
 .footerCol p {
     font-size: 1rem;
-    color: var(--primary-border);
+    color: #FBFBFB;
 }
 
 .smallHeading {
@@ -271,6 +276,7 @@
     margin-bottom: 48px;
     text-align: center;
 }
+
 
 @media (max-width: 760px) {
     .navbar {
@@ -308,7 +314,7 @@
         font-size: 2.5rem;
     }
 
-    .hero .left button {
+    .hero .left a {
         width: 100%;
     }
 

@@ -1,0 +1,11 @@
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100svh;
+}
+
+.layout .coverImage {
+    height: 100%;
+    /* overflow: hidden; */
+}
+

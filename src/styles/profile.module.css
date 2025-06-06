@@ -1,0 +1,80 @@
+.content {
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    min-width: 500px;
+    background-color: var(--new-white);
+    border-radius: 12px;
+}
+
+.container .top {
+    display: grid;
+    gap: 64px;
+}
+
+.container .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.heading h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-darker);
+}
+
+.heading p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.icon {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    display: grid;
+    place-content: center;
+    margin: auto;
+    color: var(--dark-purple);
+}
+
+.container .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.container .buttom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttom button {
+    padding: 0 20px;
+    height: 32px;
+    font-size: 0.875rem;
+    width: fit-content;
+    display: grid;
+    place-content: center;
+}
+
+.buttom .skip {
+    border: 1.5px solid var(--purple);
+    background: none;
+    color: var(--purple);
+}
+
+.buttom .next {
+    background-color: var(--purple);
+    color: var(--new-white);
+}

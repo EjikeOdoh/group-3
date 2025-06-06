@@ -1,11 +1,17 @@
 :root {
   --new-white: #FBFBFB;
   --primary: #5F4085;
+  --primary-darker: #2C1E3E;
+  --primary-light: #F2EEF7;
   --light-primary: #ECE6F3;
   --dark-primary: #171717;
   --primary-border: #7F55B1;
   --text: #1E1E1E;
+  --text-dark: #131927;
   --grey: #E5E7EA;
+  --purple: #66448E;
+  --dark-purple: #4C336A;
+  --green: #43B75D;
 }
 
 
@@ -24,15 +30,19 @@ body {
   font-family: "Manrope", sans-serif;
   max-width: 1440px;
   margin: auto;
+  min-height: 100svh;
+  color: var(--text);
 }
 
 a {
   font-family: inherit;
   text-decoration: none;
-  color: #FBFBFB;
+  color: inherit;
+  font-weight: 600;
 }
 
-button {
+button,
+.btn {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 600;
@@ -41,4 +51,22 @@ button {
   padding: 16px 24px;
   border-radius: 12px;
   border: none;
+  cursor: pointer;
+}
+
+
+.content {
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.content > div {
+  min-width: 550px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
