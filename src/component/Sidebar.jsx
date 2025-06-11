@@ -17,7 +17,7 @@ export function MenuItem(props) {
 }
 
 
-export default function Sidebar() {
+export default function Sidebar(props) {
     return (
         <div className={styles.container}>
             <div className={styles.top}>
@@ -73,7 +73,7 @@ export default function Sidebar() {
                     label="Settings"
                 />
 
-                <button className={styles.menuItem}>
+                <button onClick={props.handleLogout} className={styles.menuItem}>
                     <RiLogoutBoxRLine size={20} />
                     Log Out
                 </button>

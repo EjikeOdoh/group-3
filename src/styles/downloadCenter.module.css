@@ -73,3 +73,7 @@
 .row > .left > p {
     
 }
+
+.row > .right > * {
+    height: 40px;
+}

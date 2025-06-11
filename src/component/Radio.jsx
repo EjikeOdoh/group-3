@@ -6,7 +6,7 @@ export default function Radio(props) {
     {props.icon}
     <div className={styles.radio}>
         <label htmlFor="">{props.text}</label>
-        <input type="radio" />
+        <input onChange={props.handleChange} type="radio" />
     </div>
 </div>
   )

@@ -1,0 +1,25 @@
+dialog {
+    max-height: 100svh;
+    height: 100svh !important;
+    width: 100vw;
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+    background-color: white;
+    min-width: 500px;
+    width: 500px;
+    min-height: 400px;
+    margin-top: 50svh;
+    margin-left: 50vw;
+    transform: translate(-50%, -50%);
+}
+

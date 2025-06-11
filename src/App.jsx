@@ -43,7 +43,8 @@ function Navigation() {
               <Route path="support" element={<Support />} />
               <Route path="settings" element={<Settings />} />
               <Route path="download" element={<DownloadCenter />} />
-
+              <Route path="survey" element={<Quicksurvey />} />
+              <Route path="profile" element={<Profile />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route> :
             <Route path="/">

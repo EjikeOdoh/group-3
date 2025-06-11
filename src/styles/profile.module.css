@@ -78,3 +78,28 @@
     background-color: var(--purple);
     color: var(--new-white);
 }
+
+/* Modals */
+
+.modal {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal > .group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal > p {
+    font-weight: 600;
+}
+
+.modal > .group > * {
+    padding: 12px;
+    border: 1.5px solid #E5E7EA;
+    border-radius: 12px;
+}

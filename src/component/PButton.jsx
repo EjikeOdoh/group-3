@@ -4,7 +4,7 @@ import styles from "../styles/pbutton.module.css"
 export default function PButton  (props) {
 
     return (
-        <button className={styles.container}>
+        <button onClick={props.handleClick} className={styles.container}>
             {props.text}
             <PiCaretDownBold />
         </button>

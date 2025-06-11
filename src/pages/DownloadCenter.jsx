@@ -23,7 +23,7 @@ function Row(props) {
                     <p>{props.size}</p>
                 </div>
             </div>
-            <div>
+            <div className={styles.right}>
 
                 {props.complete ?
                     <Button text="Downloaded" /> :

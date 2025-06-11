@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../component/Header'
 import { IoMdFunnel } from "react-icons/io"
 import styles from "../styles/notifications.module.css"
-import Button from "../components/Button"
+import Button from "../component/Button"
 import { MdKeyboardArrowDown } from "react-icons/md"
 import { GoPerson } from "react-icons/go"
 import { IoChatbox, IoChatboxOutline } from "react-icons/io5"
@@ -11,12 +11,14 @@ import { VscListFilter } from "react-icons/vsc"
 
 export default function Notifications() {
   return (
-    <div>
+    <div className={styles.container}>
       <Header
         label="Notifications"
       />
 
-      <div className={styles.container}>
+      <div className={styles.top}></div>
+
+      <div className={styles.content}>
         <div className={styles.all}>
           <h4>
             All Notifications

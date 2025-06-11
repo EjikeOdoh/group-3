@@ -62,4 +62,20 @@
     font-weight: 600;
 }
 
+/* Styling for created account modal */
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    text-align: center;
+    padding: 32px;
+    align-items: center;
+}
+
+.modal > .image {
+    width: 300px;
+    height: 300px;
+    display: flex;
+
+}
 

@@ -23,7 +23,7 @@ export default function Result() {
     }
 
     const next =() => {
-        navigate('/courses')
+        navigate('/profile')
     }
 
     return (
