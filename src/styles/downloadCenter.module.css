@@ -1,11 +1,15 @@
 .container {
     background-color: var(--primary-light);
+    /* margin-top: -60px; */
+    min-height: 100svh;
 }
 
+.container > .top {
+    height: 100px;
+}
 
-
-.content {
-    padding-top: 100px;
+.container > .content {
+   
     max-width: 800px;
     margin: 60px auto;
     background-color: var(--new-white);

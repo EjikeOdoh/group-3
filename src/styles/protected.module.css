@@ -1,5 +1,5 @@
 .container {
-    height: 100svh;
+    height: 100%;
     scrollbar-width: none;
     background-color: var(--primary-light);
 }

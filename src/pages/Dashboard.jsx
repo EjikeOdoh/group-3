@@ -15,6 +15,7 @@ import { Button, Switch } from '@mui/material'
 import { BsHeadset } from 'react-icons/bs'
 import { RiVideoLine } from 'react-icons/ri'
 import { DateCalendar } from '@mui/x-date-pickers'
+import Calender from '../component/Calender'
 
 export function Plan(props) {
   return (
@@ -163,7 +164,8 @@ export default function Dashboard() {
             <div className={styles.switch}><p>Poor connection? Switch to audio mode</p> <Switch /> </div>
           </div>
           <div className={styles.calender}>
-            <DateCalendar className={styles.actualCalender} />
+            {/* <DateCalendar className={styles.actualCalender} /> */}
+            <Calender />
           </div>
           <div className={styles.reward}>
             <h3>My reward System</h3>

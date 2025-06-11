@@ -1,0 +1,55 @@
+.container {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > .top {
+    height: 100px;
+  }
+
+.container >.content {
+    flex: 1;
+    padding: 100px 24px;
+    display: flex;
+    gap: 24px;
+}
+
+.cards {
+    min-width: 60%;
+    height: fit-content;
+    border-radius: 12px;
+    background-color: white;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Styling for card component */
+
+.card {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #E5E5E5EE;
+    border-radius: 8px;
+}
+
+.card > h3 {
+    font-weight: 600;
+    color: black;
+    font-size: 0.875rem;
+}
+
+.card > div {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+}
+
+.card > div > span {
+    font-size: 0.875rem;
+}

@@ -42,7 +42,7 @@ export default function Sidebar() {
                 <MenuItem
                     to="/schedule"
                     icon={<RiCalendarScheduleLine size={20} />}
-                    label="Schedule"
+                    label="Calenders"
                 />
                 <MenuItem
                     to="/rewards"

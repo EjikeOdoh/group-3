@@ -42,6 +42,7 @@ export default function DownloadCenter() {
             <Header
                 label="Courses"
             />
+            <div className={styles.top}></div>
             <div className={styles.content}>
                 <h2>Courses</h2>
 
