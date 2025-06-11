@@ -1,0 +1,40 @@
+.container {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+
+.container >.content {
+    width: 900px;
+    margin: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 24px;
+    background-color: white;
+    height: fit-content;
+}
+
+
+/* Styling for quiz component */
+.quiz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px;
+}
+
+.quiz > .left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.quiz > .left > .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
