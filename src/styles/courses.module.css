@@ -136,6 +136,7 @@
 }
 
 .content {
+    padding-top: 100px;
     flex: 1;
     margin: 24px;
     display: grid;

@@ -22,6 +22,7 @@ import { useContext } from 'react'
 
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import DownloadCenter from './pages/DownloadCenter'
 
 function Navigation() {
 
@@ -41,6 +42,8 @@ function Navigation() {
               <Route path="quizzes" element={<Quizzes />} />
               <Route path="support" element={<Support />} />
               <Route path="settings" element={<Settings />} />
+              <Route path="download" element={<DownloadCenter />} />
+
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route> :
             <Route path="/">

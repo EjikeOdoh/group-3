@@ -1,5 +1,10 @@
 .container {
-    min-height: 100svh;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    height: 100svh;
+    scrollbar-width: none;
+    background-color: var(--primary-light);
+}
+
+.content {
+    margin-left: 250px;
+    position: relative;
 }

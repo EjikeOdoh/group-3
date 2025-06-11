@@ -14,7 +14,6 @@
   --green: #43B75D;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +31,7 @@ body {
   margin: auto;
   min-height: 100svh;
   color: var(--text);
+  font-size: 1rem;
 }
 
 a {

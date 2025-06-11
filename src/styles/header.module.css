@@ -1,5 +1,9 @@
 .header {
-    height: 120px;
+    position: fixed;
+    height: 80px;
+    width: calc(
+        min(100vw, 1440px) - 250px
+      );
     padding-inline: 24px;
     display: flex;
     align-items: center;

@@ -32,17 +32,22 @@
 
 .container {
     max-width: 250px;
+    width: 250px;
     background-color: var(--primary);
     padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: fixed;
+    height: 100svh;
+    z-index: 2;
 }
 
 .container .top, .container .bottom {
     display: flex;
     flex-direction: column;
     gap: 24px;
+ 
 }
 
 .container .top .logo {
