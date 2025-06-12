@@ -16,6 +16,9 @@ import { BsHeadset } from 'react-icons/bs'
 import { RiVideoLine } from 'react-icons/ri'
 import { DateCalendar } from '@mui/x-date-pickers'
 import Calender from '../component/Calender'
+import { useContext, useEffect } from 'react'
+import { baseUrl } from '../utils/config'
+import { AuthContext } from '../context/AuthContext'
 
 export function Plan(props) {
   return (
@@ -73,6 +76,22 @@ export function Reward(props) {
 }
 
 export default function Dashboard() {
+
+  const token = useContext(AuthContext)
+
+  useEffect(() => {
+    fetch(baseUrl + "/userprofile/update-profile/", {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Token ' + token,
+        'Content-Type': 'application/json' 
+      }
+    })
+    .then(res => res.json())
+    .then(datum => console.log(datum))
+    
+  }, [])
+
   return (
     <div className={styles.container}>
       <Header

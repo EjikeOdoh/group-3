@@ -7,21 +7,21 @@ export const AuthReducerContext = createContext(null)
 function authReducer(state, action) {
     switch (action.type) {
         case true: {
-            return true
+            return action.token
         }
 
         case false: {
-            return false
+            return null
         }
     }
 }
 
 export default function AuthWrapper(props) {
 
-    const [isLoggedIn, dispatch] = useReducer(authReducer, false)
+    const [token, dispatch] = useReducer(authReducer, null)
 
     return (
-        <AuthContext value={isLoggedIn}>
+        <AuthContext value={token}>
             <AuthReducerContext value={dispatch}>
                 {props.children}
             </AuthReducerContext>

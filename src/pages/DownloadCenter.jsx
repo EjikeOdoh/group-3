@@ -24,12 +24,11 @@ function Row(props) {
                 </div>
             </div>
             <div className={styles.right}>
-
                 {props.complete ?
-                    <Button text="Downloaded" /> :
+                    <Button text="Downloaded" handleClick={props.handlePopup} /> :
                     <WhiteButton
                         text="Download"
-                        icon={<LiaDownloadSolid size={20} />}
+                        icon={<LiaDownloadSolid size={20} handleClick={props.handlePopup} />}
                     />}
             </div>
         </div>
@@ -55,6 +54,9 @@ export default function DownloadCenter() {
                     course="Robotics"
                     size="800MB"
                     thumbnail={Robotics}
+                    // handlePopup = {
+                    //     // this is where you pass in the function to open the popup
+                    // }
                 />
 
 

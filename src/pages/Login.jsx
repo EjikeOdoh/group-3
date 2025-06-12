@@ -4,15 +4,43 @@ import WhiteButton from '../component/WhiteButton'
 import styles from '../styles/login.module.css'
 import man from '../images/man.jpg'
 import { Link } from 'react-router'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { AuthReducerContext } from '../context/AuthContext'
+import { baseUrl } from '../utils/config'
 
 export default function Login() {
 
     const dispatch = useContext(AuthReducerContext)
 
-    const signIn = async () => {
-        dispatch({type: true})
+    const [isLoading, setIsLoading] = useState(false)
+
+    const signIn = (formData) => {
+        const data = Object.fromEntries(formData)
+
+        setIsLoading(true)
+
+        fetch(baseUrl + "/userprofile/login/", {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error()
+                }
+                return res.json()
+            })
+            .then(({token})=> {
+                console.log(token)
+                dispatch({
+                    type: true,
+                    token
+                   })
+            })
+            .catch(err => console.log(err))
+            .finally(() => setIsLoading(false))
     }
 
     return (
@@ -26,12 +54,12 @@ export default function Login() {
                     <form action={signIn} className={styles.myform}>
 
                         <div className={styles.cat}>
-                            <label htmlFor="">Email</label>
-                            <input type="text" placeholder="Enter your email" />
+                            <label htmlFor="username">Username</label>
+                            <input id="username" name="username" type="text" placeholder="Enter your username" />
                         </div>
                         <div className={styles.cat}>
-                            <label htmlFor="">Password</label>
-                            <input type="text" placeholder="Create a password" />
+                            <label htmlFor="password">Password</label>
+                            <input id="password" name="password" type="text" placeholder="Create a password" />
                         </div>
 
                         <div className={styles.forget}>
@@ -44,7 +72,7 @@ export default function Login() {
 
 
                         <div className={styles.btn}>
-                            <Button text="Sign in" />
+                            <Button text="Sign in" loading={isLoading} />
                             <WhiteButton text="Sign up with Google" />
                         </div>
 

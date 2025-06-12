@@ -11,9 +11,10 @@ import { FaMinus } from 'react-icons/fa'
 import { PiCaretDownBold } from 'react-icons/pi'
 import { SiInstagram } from 'react-icons/si'
 import { CiLinkedin, CiTwitter } from 'react-icons/ci'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { MdMenu } from 'react-icons/md'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
+import MobileNav from '../component/MobileNav'
 
 
 function Item(props) {
@@ -28,9 +29,9 @@ function Item(props) {
             <div className={styles.question}>
                 <p style={props.active === true ? { fontWeight: 600, fontSize: "1.125rem" } : undefined}>{props.question}</p>
                 <button onClick={() => props.handleClick(props.id)}>
-                   {
-                    props.active === true ? <FaMinus /> :  <PiCaretDownBold />
-                   }
+                    {
+                        props.active === true ? <FaMinus /> : <PiCaretDownBold />
+                    }
                 </button>
             </div>
             {
@@ -55,38 +56,49 @@ function FooterCol(props) {
 
 export default function LandingPage() {
 
+    const navigate = useNavigate()
+
     const [questions, setQuestions] = useState([
         {
-          "id": 1,
-          "active": false,
-          "question": "How do I earn XP, rewards, and Badges?",
-          "answer": "By completing lessons, achieving milestones, and demonstrating progress in the app, which can be redeemed or displayed on your profile."
+            "id": 1,
+            "active": false,
+            "question": "How do I earn XP, rewards, and Badges?",
+            "answer": "By completing lessons, achieving milestones, and demonstrating progress in the app, which can be redeemed or displayed on your profile."
         },
         {
-          "id": 2,
-          "active": true,
-          "question": "Can I lose XP or rewards?",
-          "answer": "No, once earned, XP and rewards remain in your account. However, some time-limited rewards may expire if not used."
+            "id": 2,
+            "active": true,
+            "question": "Can I lose XP or rewards?",
+            "answer": "No, once earned, XP and rewards remain in your account. However, some time-limited rewards may expire if not used."
         },
         {
-          "id": 3,
-          "active": false,
-          "question": "Are Badges just for show, or do they have benefits?",
-          "answer": "Badges showcase your achievements and may unlock exclusive perks, bonus content, or special recognition in the community."
+            "id": 3,
+            "active": false,
+            "question": "Are Badges just for show, or do they have benefits?",
+            "answer": "Badges showcase your achievements and may unlock exclusive perks, bonus content, or special recognition in the community."
         },
         {
-          "id": 4,
-          "active": true,
-          "question": "How often are new rewards added?",
-          "answer": "We regularly introduce new rewards and challenges based on user feedback and app updates—check the rewards section frequently!"
+            "id": 4,
+            "active": true,
+            "question": "How often are new rewards added?",
+            "answer": "We regularly introduce new rewards and challenges based on user feedback and app updates—check the rewards section frequently!"
         },
         {
-          "id": 5,
-          "active": false,
-          "question": "Can I share my Badges on social media?",
-          "answer": "Yes! You can easily share your achievements on social platforms directly from your profile to celebrate your progress."
+            "id": 5,
+            "active": false,
+            "question": "Can I share my Badges on social media?",
+            "answer": "Yes! You can easily share your achievements on social platforms directly from your profile to celebrate your progress."
         }
-      ])
+    ])
+    const [isOpen, setIsOpen] = useState(false)
+
+    const openMenu = () => {
+        setIsOpen(true);
+    }
+
+    const closeMenu = () => {
+        setIsOpen(false);
+    }
 
     const selectQ = (id) => {
         console.log(id)
@@ -98,6 +110,19 @@ export default function LandingPage() {
             }
         }))
     }
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
+
 
     const faqContent = questions.map(question => {
         return (
@@ -111,7 +136,6 @@ export default function LandingPage() {
             />
         )
     })
-
 
     return (
         <div className={styles.container}>
@@ -131,14 +155,16 @@ export default function LandingPage() {
                         <Link to="/register" className="btn">Sign-Up</Link>
                     </div>
 
-                    <button className={styles.menuBtn}>
+                    <button onClick={openMenu} className={styles.menuBtn}>
                         <MdMenu size={24} />
                     </button>
+
+                    {isOpen ? <MobileNav handleClose={closeMenu} /> : null}
                 </nav>
                 <div className={styles.hero}>
                     <div className={styles.left}>
                         <h1>Learn Smarter, Anywhere, Anytime</h1>
-                        <Link className='btn'>Start Learning</Link>
+                        <Link to="/login" className='btn'>Start Learning</Link>
                     </div>
                     <div className={styles.right}>
                         <img src={Cover} alt='video icon' />
@@ -218,11 +244,11 @@ export default function LandingPage() {
                 </div>
             </div>
 
-            <div className={styles.faq}>
+            <div id='faq' className={styles.faq}>
                 <h2 className={styles.subHeading}>Frequently Asked Questions</h2>
 
                 <div className={styles.accordion}>
-                {faqContent}
+                    {faqContent}
                 </div>
             </div>
 
@@ -246,7 +272,7 @@ export default function LandingPage() {
                     />
                     <FooterCol
                         heading="Account"
-                        options={["Pricing policy","Terms & conditions", "Help center"]}
+                        options={["Pricing policy", "Terms & conditions", "Help center"]}
                     />
                     <FooterCol
                         heading="Contact"
