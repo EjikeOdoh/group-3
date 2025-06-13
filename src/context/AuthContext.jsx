@@ -7,7 +7,9 @@ export const AuthReducerContext = createContext(null)
 function authReducer(state, action) {
     switch (action.type) {
         case true: {
-            return action.token
+            return { ...state, 
+                token: action.token, 
+                account: action.acctType }
         }
 
         case false: {
@@ -18,7 +20,7 @@ function authReducer(state, action) {
 
 export default function AuthWrapper(props) {
 
-    const [token, dispatch] = useReducer(authReducer, null)
+    const [token, dispatch] = useReducer(authReducer, {})
 
     return (
         <AuthContext value={token}>

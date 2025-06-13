@@ -26,13 +26,16 @@ import DownloadCenter from './pages/DownloadCenter'
 
 function Navigation() {
 
-  const isLogged = useContext(AuthContext)
+  const { token } = useContext(AuthContext)
 
   return (
     <BrowserRouter>
       <Routes>
         {
-          isLogged ?
+          token ? <>
+            <Route path="profile" element={<Profile />} />
+            <Route path="survey" element={<Quicksurvey />} />
+            <Route path="result" element={<Result />} />
             <Route path="/" element={<Protected />} >
               <Route index element={<Dashboard />} />
               <Route path="courses" element={<Courses />} />
@@ -44,16 +47,14 @@ function Navigation() {
               <Route path="settings" element={<Settings />} />
               <Route path="download" element={<DownloadCenter />} />
               <Route path="survey" element={<Quicksurvey />} />
-              <Route path="profile" element={<Profile />} />
               <Route path="*" element={<Navigate to="/" replace />} />
-            </Route> :
+            </Route>
+          </>
+            :
             <Route path="/">
               <Route index element={<LandingPage />} />
               <Route path="login" element={<Login />} />
               <Route path="register" element={<Signup />} />
-              <Route path="profile" element={<Profile />} />
-              <Route path="survey" element={<Quicksurvey />} />
-              <Route path="result" element={<Result />} />
               <Route path="*" element={<Navigate to="/login" replace />} />
             </Route>
         }

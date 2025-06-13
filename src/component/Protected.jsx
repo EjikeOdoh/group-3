@@ -1,20 +1,29 @@
-import { Outlet } from 'react-router'
+import { Outlet, useNavigate } from 'react-router'
 import styles from '../styles/protected.module.css'
 import Sidebar from './Sidebar'
 import Popup from './Popup'
-import { useContext, useRef } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 import { RiLogoutBoxRLine } from 'react-icons/ri'
 import Button from '../component/Button'
 import WhiteButton from '../component/WhiteButton'
 import { closeModal, openModal } from '../utils/modal'
-import { AuthReducerContext } from '../context/AuthContext'
+import { AuthContext, AuthReducerContext } from '../context/AuthContext'
 
 
 export default function Protected() {
 
-  const logoutRef = useRef(null)
+  const navigate = useNavigate()
 
+  const logoutRef = useRef(null)
+  const {account} =  useContext(AuthContext)
   const dispatch = useContext(AuthReducerContext)
+
+  useEffect(() => {
+    if (account === "new") {
+      navigate("/profile");
+    }
+  }, [account, navigate]);
+
 
   return (
     <div className={styles.container}>

@@ -4,6 +4,8 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io"
 import WhiteButton from "../component/WhiteButton"
 import Button from "../component/Button"
 import { useNavigate } from "react-router"
+import { useContext } from "react"
+import { AuthContext, AuthReducerContext } from "../context/AuthContext"
 
 export function Point(props) {
     return (
@@ -17,13 +19,21 @@ export function Point(props) {
 export default function Result() {
 
     const navigate = useNavigate()
+    const dispatch = useContext(AuthReducerContext)
+    const token = useContext(AuthContext)
+
+    console.log(token)
 
     const back = () => {
         navigate(-1)
     }
 
     const next =() => {
-        navigate('/profile')
+        dispatch({
+            type: true,
+            token: {...token, account: 'old'}
+        })
+        navigate('/')
     }
 
     return (

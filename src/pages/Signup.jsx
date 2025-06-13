@@ -20,40 +20,46 @@ export default function Signup() {
     const [isLoading, setIsLoading] = useState(false)
     const [token, setToken] = useState(null)
 
-    const register = (formData) => {
-        let data = Object.fromEntries(formData)
-        const fullName = data["username"]
-        const names = String(fullName).split(" ")
-        const first_name = names[0]
-        const last_name = names[1]
-        const username = first_name + last_name
+    // const register = (formData) => {
+    //     let data = Object.fromEntries(formData)
+    //     const fullName = data["username"]
+    //     const names = String(fullName).split(" ")
+    //     const first_name = names[0]
+    //     const last_name = names[1]
+    //     const username = first_name + last_name
 
-        data = { ...data, username, first_name, last_name }
-        console.log(data)
+    //     data = { ...data, username, first_name, last_name }
+    //     console.log(data)
 
-        setIsLoading(true)
+    //     setIsLoading(true)
 
-        fetch("https://aishat.pythonanywhere.com/userprofile/register/", {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        })
-        .then(res => {
-            if (!res.ok) {
-                throw new Error()
-            } 
-            return res.json()
-        })
-        .then(({token})=> {
-            console.log(token)
-            setToken(token)
-            openModal(accountRef)
-        })
-        .catch(err=>console.log(err))
-        .finally(()=> setIsLoading(false))
+    //     fetch("https://aishat.pythonanywhere.com/userprofile/register/", {
+    //         method: 'POST',
+    //         body: JSON.stringify(data),
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     })
+    //     .then(res => {
+    //         if (!res.ok) {
+    //             throw new Error()
+    //         } 
+    //         return res.json()
+    //     })
+    //     .then(({token})=> {
+    //         console.log(token)
+    //         setToken(token)
+    //         openModal(accountRef)
+    //     })
+    //     .catch(err=>console.log(err))
+    //     .finally(()=> setIsLoading(false))
+    // }
+
+    const register = () => {
+        openModal(accountRef)
     }
+
+
 
     return (
         <Layout image={girl}>
@@ -86,7 +92,6 @@ export default function Signup() {
 
                     </form>
                     <p>Already have an account? <Link to="/login">Log in</Link></p>
-
                 </div>
             </div>
             <Popup ref={accountRef}>
@@ -102,8 +107,10 @@ export default function Signup() {
                         closeModal(accountRef)
                        dispatch({
                         type: true,
-                        token
+                        token: 11111,
+                        acctType: "new"
                        })
+                       navigate("/profile")
                     }} />
                 </div>
             </Popup>

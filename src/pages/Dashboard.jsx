@@ -19,6 +19,7 @@ import Calender from '../component/Calender'
 import { useContext, useEffect } from 'react'
 import { baseUrl } from '../utils/config'
 import { AuthContext } from '../context/AuthContext'
+import Circular from '../component/Circular'
 
 export function Plan(props) {
   return (
@@ -54,7 +55,7 @@ export function Course(props) {
       </div>
 
       <div className={styles.right}>
-        {props.percent}
+        <Circular value={props.percent} label={`${props.percent}%`} />
       </div>
 
     </div>
@@ -80,8 +81,8 @@ export default function Dashboard() {
   const token = useContext(AuthContext)
 
   useEffect(() => {
-    fetch(baseUrl + "/userprofile/update-profile/", {
-      method: 'POST',
+    fetch(baseUrl + "/userprofile/info/", {
+      method: 'GET',
       headers: {
         'Authorization': 'Token ' + token,
         'Content-Type': 'application/json' 
@@ -150,21 +151,22 @@ export default function Dashboard() {
           <div className={styles.list}>
             <Course
               name="UI essentials"
-              percent="60%"
+              percent={80}
+
               time="20min"
               thumbnail={UI}
             />
 
             <Course
               name="Coding"
-              percent="60%"
+              percent={60}
               time="15min"
               thumbnail={Code}
             />
 
             <Course
               name="English"
-              percent="60%"
+              percent={60}
               time="25min"
               thumbnail={Book}
             />

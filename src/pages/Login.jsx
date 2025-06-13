@@ -5,12 +5,15 @@ import styles from '../styles/login.module.css'
 import man from '../images/man.jpg'
 import { Link } from 'react-router'
 import { useContext, useState } from 'react'
-import { AuthReducerContext } from '../context/AuthContext'
+import { AuthContext, AuthReducerContext } from '../context/AuthContext'
 import { baseUrl } from '../utils/config'
 
 export default function Login() {
 
     const dispatch = useContext(AuthReducerContext)
+    const token = useContext(AuthContext)
+
+    console.log(token)
 
     const [isLoading, setIsLoading] = useState(false)
 
@@ -39,7 +42,7 @@ export default function Login() {
                     token
                    })
             })
-            .catch(err => console.log(err))
+            .catch(err => alert(err))
             .finally(() => setIsLoading(false))
     }
 
@@ -73,7 +76,7 @@ export default function Login() {
 
                         <div className={styles.btn}>
                             <Button text="Sign in" loading={isLoading} />
-                            <WhiteButton text="Sign up with Google" />
+                            <WhiteButton text="Sign in with Google" />
                         </div>
 
                     </form>

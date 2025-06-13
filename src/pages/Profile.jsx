@@ -22,6 +22,10 @@ export default function Profile() {
         navigate('/survey')
     }
 
+    const skip = () => {
+        navigate('/survey')
+    }
+
     return (
         <Layout image={lady}>
             <div className={styles.content}>
@@ -46,7 +50,7 @@ export default function Profile() {
 
                     </div>
                     <div className={styles.buttom}>
-                        <button className={styles.skip}>Skip</button>
+                        <button className={styles.skip} onClick={skip} >Skip</button>
                         <button className={styles.next} onClick={next}>Next</button>
                     </div>
 
