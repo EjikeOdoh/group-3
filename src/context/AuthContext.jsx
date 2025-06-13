@@ -13,7 +13,7 @@ function authReducer(state, action) {
         }
 
         case false: {
-            return null
+            return {}
         }
     }
 }

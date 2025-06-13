@@ -15,6 +15,8 @@ export default function Profile() {
 
     const ageRef = useRef(null)
     const internetRef = useRef(null)
+    const learningStyleRef = useRef(null)
+    const interestRef = useRef(null)
 
     const navigate = useNavigate()
 
@@ -43,8 +45,8 @@ export default function Profile() {
                         <div className={styles.btns}>
                             <PButton text="Age group" handleClick={() => openModal(ageRef)} />
                             <PButton text="Internet Type" handleClick={()=> openModal(internetRef)} />
-                            <PButton text="Preferred Learning Style" />
-                            <PButton text="Topics Of Interest" />
+                            <PButton text="Preferred Learning Style" handleClick={()=> openModal(learningStyleRef)} />
+                            <PButton text="Topics Of Interest" handleClick={()=> openModal(interestRef)} />
                         </div>
 
 
@@ -66,9 +68,9 @@ export default function Profile() {
                     <p>Age Group</p>
                     <div className={styles.group}>
                         <Radio text="16-20 years" handleChange={()=>closeModal(ageRef)} />
-                        <Radio text="21-25 years" />
-                        <Radio text="25-30 years" />
-                        <Radio text="30 years" />
+                        <Radio text="21-25 years" handleChange={()=>closeModal(ageRef)}/>
+                        <Radio text="25-30 years" handleChange={()=>closeModal(ageRef)}/>
+                        <Radio text="30 years" handleChange={()=>closeModal(ageRef)}/>
                     </div>
                 </div>
             </Popup>
@@ -78,9 +80,37 @@ export default function Profile() {
                 <div className={styles.modal}>
                     <p>Internet Type</p>
                     <div className={styles.group}>
-                        <Radio text="Wi-Fi" />
-                        <Radio text="Mobile Data" />
-                        <Radio text="Shared Device" />
+                        <Radio text="Wi-Fi" handleChange={()=>closeModal(internetRef)}/>
+                        <Radio text="Mobile Data" handleChange={()=>closeModal(internetRef)} />
+                        <Radio text="Shared Device" handleChange={()=>closeModal(internetRef)} />
+                     
+                    </div>
+                </div>
+            </Popup>
+
+
+            {/* Preferred Learning style popup */}
+            <Popup ref={learningStyleRef}>
+                <div className={styles.modal}>
+                    <p>Preferred Learning Style</p>
+                    <div className={styles.group}>
+                        <Radio text="Videos" handleChange={()=>closeModal(learningStyleRef)} />
+                        <Radio text="Images" handleChange={()=>closeModal(learningStyleRef)} />
+                        <Radio text="Text $ Images" handleChange={()=>closeModal(learningStyleRef)} />
+                     
+                    </div>
+                </div>
+            </Popup>
+
+
+            {/* Topic Interest popup */}
+            <Popup ref={interestRef}>
+                <div className={styles.modal}>
+                    <p>Topic of Interest</p>
+                    <div className={styles.group}>
+                        <Radio text="Science" handleChange={()=>closeModal(interestRef)} />
+                        <Radio text="Art" handleChange={()=>closeModal(interestRef)} />
+                        <Radio text="Sports" handleChange={()=>closeModal(interestRef)} />
                      
                     </div>
                 </div>

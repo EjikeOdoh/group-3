@@ -42,7 +42,7 @@ export default function Protected() {
               closeModal(logoutRef)
               dispatch({
                 type: false,
-                token: null
+                token: {}
               })
             }} />
           </div>
