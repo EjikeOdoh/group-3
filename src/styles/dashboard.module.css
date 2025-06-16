@@ -350,3 +350,10 @@ font-size: 0.75rem;
 .rewardIcon p, .rewardItem > p {
     font-size: 0.875rem;
 }
+
+@media (max-width: 760px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+}

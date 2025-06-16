@@ -6,6 +6,16 @@
 
 .layout .coverImage {
     height: 100%;
-    /* overflow: hidden; */
 }
 
+
+@media (max-width: 760px) {
+    .layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .layout > .coverImage {
+        display: none;
+    }
+}

@@ -69,7 +69,20 @@
 }
 
 @media (max-width: 760px) {
-    
+    .heading {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myform {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cat {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 

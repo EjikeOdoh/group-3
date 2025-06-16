@@ -18,32 +18,38 @@ export default function Login() {
     const [isLoading, setIsLoading] = useState(false)
 
     const signIn = (formData) => {
-        const data = Object.fromEntries(formData)
 
-        setIsLoading(true)
+        dispatch({
+            type: true,
+            token
+           })
 
-        fetch(baseUrl + "/userprofile/login/", {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        })
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error()
-                }
-                return res.json()
-            })
-            .then(({token})=> {
-                console.log(token)
-                dispatch({
-                    type: true,
-                    token
-                   })
-            })
-            .catch(err => alert(err))
-            .finally(() => setIsLoading(false))
+        // const data = Object.fromEntries(formData)
+
+        // setIsLoading(true)
+
+        // fetch(baseUrl + "/userprofile/login/", {
+        //     method: 'POST',
+        //     body: JSON.stringify(data),
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        // })
+        //     .then(res => {
+        //         if (!res.ok) {
+        //             throw new Error()
+        //         }
+        //         return res.json()
+        //     })
+        //     .then(({token})=> {
+        //         console.log(token)
+        //         dispatch({
+        //             type: true,
+        //             token
+        //            })
+        //     })
+        //     .catch(err => alert(err))
+        //     .finally(() => setIsLoading(false))
     }
 
     return (

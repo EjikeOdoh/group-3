@@ -71,3 +71,15 @@ button,
   justify-content: space-between;
 }
 
+@media (max-width: 760px) {
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content > div {
+    min-width: 100%;
+  }
+}

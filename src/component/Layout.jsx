@@ -10,7 +10,7 @@ export default function Layout(props) {
                 }
             } className={styles.coverImage}>
             </div>
-            <div style={{backgroundColor:'var(--primary-light)'}}>{props.children}</div>
+            <div style={{backgroundColor:'var(--primary-light)', flex: 1}}>{props.children}</div>
         </div>
     )
 } 

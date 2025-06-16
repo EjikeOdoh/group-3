@@ -1,0 +1,24 @@
+.mobileHeader {
+    display: none;
+}
+
+.mobileHeader > .toggleBtn {
+    background-color: transparent;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 760px) {
+    .mobileHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        padding-inline: 24px;
+        position: fixed;
+        background-color: white;
+        z-index: 20;
+        height: 100px;
+    }
+
+}

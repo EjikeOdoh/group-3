@@ -2,12 +2,13 @@ import { Outlet, useNavigate } from 'react-router'
 import styles from '../styles/protected.module.css'
 import Sidebar from './Sidebar'
 import Popup from './Popup'
-import { useContext, useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { RiLogoutBoxRLine } from 'react-icons/ri'
 import Button from '../component/Button'
 import WhiteButton from '../component/WhiteButton'
 import { closeModal, openModal } from '../utils/modal'
 import { AuthContext, AuthReducerContext } from '../context/AuthContext'
+import MobileHeader from './MobileHeader'
 
 
 export default function Protected() {
@@ -15,8 +16,14 @@ export default function Protected() {
   const navigate = useNavigate()
 
   const logoutRef = useRef(null)
-  const {account} =  useContext(AuthContext)
+  const { account } = useContext(AuthContext)
   const dispatch = useContext(AuthReducerContext)
+
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(prev => !prev)
+  }
 
   useEffect(() => {
     if (account === "new") {
@@ -27,8 +34,16 @@ export default function Protected() {
 
   return (
     <div className={styles.container}>
-      <Sidebar handleLogout={() => openModal(logoutRef)} />
+      <div className={styles.desktop}>
+        <Sidebar handleLogout={() => openModal(logoutRef)} />
+
+      </div>
+      <div style={isOpen ? { marginLeft: 0 } : undefined} className={styles.mobile}>
+        <Sidebar handleLogout={() => openModal(logoutRef)} />
+      </div>
+
       <div className={styles.content}>
+        <MobileHeader isOpen={isOpen} handleMenu={toggleMenu} />
         <Outlet />
       </div>
       {/* Log out modal */}

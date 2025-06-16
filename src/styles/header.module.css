@@ -12,6 +12,10 @@
     z-index: 5;
 }
 
+.mobileHeader {
+    display: none;
+}
+
 .header h3 {
     color: var(--dark-primary);
     font-weight: 500;
@@ -61,4 +65,29 @@
     display: grid;
     place-content: center;
     overflow: hidden;
+}
+
+@media (max-width: 760px) {
+    .header {
+        flex-direction: column-reverse;
+        height: auto;
+        width: 100vw;
+        padding: 24px;
+        align-items: start;
+        gap: 16px;
+        display: none;
+    }
+
+    .header h3 {
+        font-size: 1rem;
+    }
+
+    .header .right {
+        width: 100%;
+    }
+
+    .header .right .searchForm {
+        flex: 1;
+        min-width: 0;
+    }
 }

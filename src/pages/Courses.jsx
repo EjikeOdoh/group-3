@@ -168,7 +168,6 @@ function Session(props) {
           backgroundColor: '#7F55B1',
           fontFamily: 'inherit',
           fontWeight: 600,
-          fontSize: '0.75rem',
           color: '#ffffff',
           borderRadius: '8px',
           fontSize: '0.625rem',

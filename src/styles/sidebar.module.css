@@ -53,3 +53,18 @@
 .container .top .logo {
     display: flex;
 }
+
+@media (max-width: 760px) {
+
+    .container {
+        height: calc(100svh - 100px);
+    }
+
+    .container .top, .container .bottom {
+        gap: 16px;
+    }
+
+    .container .top .logo {
+        display: none;
+    }
+}
