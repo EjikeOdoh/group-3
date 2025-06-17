@@ -13,6 +13,7 @@
     padding: 100px 24px;
     display: flex;
     gap: 24px;
+    
 }
 
 .cards {
@@ -52,4 +53,30 @@
 
 .card > div > span {
     font-size: 0.875rem;
+}
+
+@media (max-width: 760px) {
+
+    .container {
+        height: auto;
+    }
+
+    .container > .content {
+        flex-direction: column;
+        padding: 50px 16px;
+    }
+
+    .cards {
+        padding: 16px;
+        gap: 24px;
+    }
+
+    /* Styling for card component */
+    .card {
+        padding: 16px;
+    }
+
+    .card > div {
+        gap: 16px;
+    }
 }

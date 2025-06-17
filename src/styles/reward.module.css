@@ -110,3 +110,69 @@
 .badge > p {
     color: var(--primary-darker);
 }
+
+
+@media (max-width: 760px) {
+    .container >.content {
+        width: 100%;
+        padding: 50px 16px;
+    }
+
+    .content > .first > .level {
+        gap: 24px;
+        padding: 16px;
+    }
+
+    .content > .first > .level .image {
+        width: 60px;
+    }
+
+    .content > .first > .level .texts {
+        gap: 2px;
+    }
+
+    .content > .first > .level .texts h3 {
+        font-size: 1rem;
+    }
+
+    .content > .first > .level .texts h2 {
+        font-size: 1.125rem;
+    }
+
+    .content > .first > small {
+        font-size: 0.75rem;
+    }
+
+    .section > h3 {
+        font-size: 1rem;
+    }
+
+    /* Styling for row component */
+
+    .row {
+        border-radius: 8px;
+    }
+
+    .row > .value > h4, .row > .value > p {
+        font-size: 0.875rem;
+    }
+
+    .row > p {
+        font-size: 0.75rem;
+    }
+
+    /* Styling for badge */
+
+    .badge {
+        gap: 16px;
+    }
+
+    .badge > .thumbnail {
+        width: 40px;
+        height: 40px;
+    }
+
+    .badge > p {
+        font-size: 0.75rem;
+    }
+}

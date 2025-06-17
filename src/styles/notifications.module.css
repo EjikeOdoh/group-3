@@ -57,7 +57,6 @@
     place-content: center;
     display: grid;
     border-radius: 12px;
-    gap: 32px;
 }
 
 .text h4,
@@ -72,4 +71,60 @@
 
 .text p {
     font-size: 0.625rem;
+}
+
+@media (max-width: 760px) {
+
+    .container {
+        padding: 16px;
+        gap: 0;
+
+    }
+
+    .container>.content {
+        padding: 16px;
+        width: 100%;
+        gap: 24px;
+        justify-self: self-start;
+        align-self: start;
+        margin: 50px auto;
+        border-radius: 12px;
+    }
+
+    .all > h4 {
+        font-size: 0.875rem;
+    }
+
+    .today {
+        gap: 8px;
+    }
+
+    .today > button {
+        font-size: 0.75rem;
+        height: 32px;
+        padding-inline: 10px;
+    }
+
+    .row {
+        width: 100%;
+        padding: 8px;
+        align-items: start;
+        height: auto;
+    }
+
+    .row > p {
+        font-size: 0.75rem;
+    }
+
+    .left {
+        align-items: start;
+    }
+
+    .left .icon {
+        min-width: 40px;
+        min-height: 40px;
+        height: 40px;
+        width: 40px;
+        border-radius: 4px;
+    }
 }

@@ -46,7 +46,7 @@ export default function DownloadCenter() {
                 <h2>Courses</h2>
 
                 <div className={styles.notice}>
-                    <RiSimCardFill size={32} />
+                    <RiSimCardFill size={32} style={{minWidth: '32px'}} />
                     <p>Offline learning bundles include video, audio and PDFs, Downloads are available for 7 days</p>
                 </div>
 

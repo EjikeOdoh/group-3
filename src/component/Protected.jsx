@@ -25,12 +25,27 @@ export default function Protected() {
     setIsOpen(prev => !prev)
   }
 
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+
   useEffect(() => {
     if (account === "new") {
       navigate("/profile");
     }
   }, [account, navigate]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.overflow = "hidden"
+    } else {
+      document.body.overflow = "auto"
+    }
+
+    () => {
+      document.body.overflow = "auto"
+    }
+  }, [isOpen])
 
   return (
     <div className={styles.container}>
@@ -39,7 +54,7 @@ export default function Protected() {
 
       </div>
       <div style={isOpen ? { marginLeft: 0 } : undefined} className={styles.mobile}>
-        <Sidebar handleLogout={() => openModal(logoutRef)} />
+        <Sidebar handleLogout={() => openModal(logoutRef)} closeMenu={closeMenu} />
       </div>
 
       <div className={styles.content}>

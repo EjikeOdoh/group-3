@@ -9,7 +9,7 @@
     height: 100px;
 }
 
-.container>.content {
+.container > .content {
     width: 900px;
     margin: auto;
     padding: 24px;
@@ -96,4 +96,53 @@
     font-size: 1rem;
     border-radius: 12px;
     font-family: inherit;
+}
+
+@media (max-width: 760px) {
+
+    .container {
+        padding: 16px;
+        gap: 20px;
+    }
+
+    .container > .content  {
+        width: 100%;
+        border-radius: 8px;
+        padding: 16px;
+    }
+
+    .content > .top {
+        gap: 16px;
+    }
+
+    .top > .pageInfo > h2 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .photo {
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+
+    .pageAction > .btns {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .myForm {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cat label {
+        font-size: 0.875rem;
+    }
+
+    .cat input {
+        height: 40px;
+        border-radius: 8px;
+        font-size: 0.875rem;
+    }
 }

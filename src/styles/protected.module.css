@@ -30,6 +30,11 @@
 }
 
 @media (max-width: 760px) {
+
+    .container {
+        height: auto;
+    }
+    
     .desktop {
         display: none;
     }

@@ -12,6 +12,7 @@
 .item .image, .session .image {
     width: 40px;
     height: 40px;
+    min-width: 40px;
     border-radius: 4px;
     display: flex;
     overflow: hidden;
@@ -222,4 +223,55 @@
 .seeAll {
     font-size: 0.875rem;
     color: #724D9F;
+}
+
+
+@media (max-width: 760px) {
+    .content {
+        display: flex;
+        flex-direction: column;    }
+
+    .content > *:not(:last-child) {
+        padding: 16px;
+    }
+
+    .third > * {
+        padding: 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Styling for session component */
+    .session {
+        flex-direction: column;
+        align-items: start;
+        height: auto;
+        padding: 16px;
+        gap: 32px;
+    }
+
+    .session .left {
+        align-items: start;
+    }
+
+    .session .texts h4 {
+        text-wrap: wrap;
+    }
+
+    /* Styling for course component */
+
+    .course {
+        gap: 24px;
+    }
+    .course > * {
+        flex: 1;
+        width: 50%;
+    }
+
+    /* Styling for item component */
+    .texts h4 {
+        text-wrap: wrap;
+    }
 }
