@@ -36,14 +36,15 @@ export default function Protected() {
   }, [account, navigate]);
 
   useEffect(() => {
+    console.log('mobile menu action')
     if (isOpen) {
       document.body.overflow = "hidden"
     } else {
-      document.body.overflow = "auto"
+      document.body.overflow = ""
     }
 
     () => {
-      document.body.overflow = "auto"
+      document.body.overflow = ""
     }
   }, [isOpen])
 
